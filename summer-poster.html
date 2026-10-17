@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>高溫來襲，妳的身體撐得住嗎？｜消暑調理海報</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal-deep:#0b6e6a;
+    --teal-mid:#1f9a90;
+    --aqua-bg:#eafbfa;
+    --coral:#ef8272;
+    --coral-deep:#d96654;
+    --ink:#233c38;
+    --sub-ink:#5b746f;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:"Noto Sans TC","Noto Sans CJK TC","PingFang TC",sans-serif;
+    background:#f4fbfa;
+    display:flex; justify-content:center; padding:24px 0 60px;
+    color:var(--ink);
+  }
+  .serif{ font-family:"Noto Serif TC","Noto Serif CJK TC",serif; }
+
+  .poster{
+    width:1040px; position:relative; overflow:hidden;
+    background:
+      radial-gradient(1200px 500px at 85% -10%, #d7f4f0 0%, rgba(215,244,240,0) 60%),
+      linear-gradient(180deg,#f7fdfc 0%, #ffffff 45%, #fdf9f4 100%);
+    border-radius:30px;
+    box-shadow:0 24px 70px rgba(20,70,65,0.14);
+  }
+
+  .wave{ width:100%; height:44px; display:block; }
+
+  /* ---- HERO ---- */
+  .hero{ position:relative; padding:44px 52px 10px; }
+  .brand-pill{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--teal-deep); color:#fff; font-size:17px; font-weight:700;
+    padding:9px 22px 9px 16px; border-radius:999px; letter-spacing:1.5px;
+  }
+  .hero-grid{ display:flex; align-items:center; gap:20px; margin-top:22px; }
+  .hero-text{ flex:1.1; }
+  .hero-eyebrow{ color:var(--coral-deep); font-weight:700; font-size:17px; letter-spacing:2.5px; margin-bottom:12px; }
+  .hero h1{ font-size:60px; line-height:1.22; font-weight:900; color:var(--teal-deep); margin:0 0 18px; }
+  .hero h1 .hl{ color:var(--coral); }
+  .hero p.lead{ font-size:22px; font-weight:500; color:var(--sub-ink); line-height:1.6; max-width:480px; margin:0; }
+  .hero-figure{ flex:1; display:flex; justify-content:center; }
+
+  /* ---- SECTION HEADS ---- */
+  .sec-head{ text-align:center; margin:6px 0 26px; padding:0 52px; }
+  .sec-head .tag{ color:var(--coral-deep); font-weight:700; font-size:16px; letter-spacing:2.5px; margin-bottom:10px; }
+  .sec-head h2{ font-size:38px; font-weight:700; color:var(--teal-deep); margin:0; }
+
+  /* ---- CHIP CARDS (why women feel heat more) ---- */
+  .chip-row{ display:flex; gap:20px; padding:0 52px 6px; }
+  .chip{
+    flex:1; background:#fff; border-radius:22px; padding:28px 20px 26px; text-align:center;
+    box-shadow:0 10px 26px rgba(20,70,65,0.07); border:1px solid #eef8f6;
+  }
+  .chip-icon{
+    width:70px;height:70px; border-radius:50%; margin:0 auto 18px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .chip h3{ font-size:23px; margin:0 0 8px; color:var(--ink); font-weight:700; }
+  .chip p{ font-size:17px; color:var(--sub-ink); line-height:1.6; margin:0; }
+
+  /* ---- BENEFIT BAND (teal) ---- */
+  .benefit-band{
+    margin:8px 52px 8px; background:linear-gradient(135deg,#0b6e6a,#1f9a90);
+    border-radius:28px; padding:34px 32px 30px; color:#fff;
+  }
+  .benefit-band .sec-head-inner{ text-align:center; margin-bottom:26px; }
+  .benefit-band .sec-head-inner .tag{ color:#ffd7c9; font-weight:700; font-size:16px; letter-spacing:2.5px; margin-bottom:8px;}
+  .benefit-band .sec-head-inner h2{ font-size:32px; font-weight:700; margin:0; }
+  .benefit-grid{ display:flex; gap:18px; }
+  .benefit-chip{
+    flex:1; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.28);
+    border-radius:20px; padding:24px 14px 22px; text-align:center;
+  }
+  .benefit-chip .b-icon{
+    width:52px;height:52px;border-radius:50%; margin:0 auto 14px; background:rgba(255,255,255,0.2);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .benefit-chip h4{ font-size:20px; font-weight:700; margin:0 0 8px; color:#fff; }
+  .benefit-chip p{ font-size:15.5px; line-height:1.55; color:#eafdfb; margin:0; }
+
+  /* ---- CLOSING ---- */
+  .closing{ text-align:center; padding:34px 60px 10px; }
+  .closing h3{ font-size:30px; color:var(--teal-deep); font-weight:700; margin:0 0 12px; }
+  .closing p{ font-size:19px; font-weight:500; color:var(--sub-ink); line-height:1.7; margin:0 auto; max-width:640px; }
+
+  .footer-bar{
+    margin:28px 0 0; background:var(--teal-deep); color:#fff; text-align:center;
+    font-size:19px; font-weight:700; letter-spacing:1.2px; padding:18px 0;
+    border-radius:0 0 30px 30px;
+  }
+  .footer-bar .dot{ margin:0 12px; opacity:.6; }
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <!-- HERO -->
+  <div class="hero">
+    <span class="brand-pill">🌿 人身難得．經絡美容調理</span>
+    <div class="hero-grid">
+      <div class="hero-text">
+        <div class="hero-eyebrow">TEMPERATURE ｜ WOMEN ｜ WELLNESS</div>
+        <h1 class="serif">高溫來襲，<br><span class="hl">妳</span>的身體撐得住嗎？</h1>
+        <p class="lead">固定調理，陪身體從容度過每個炎夏。</p>
+      </div>
+      <div class="hero-figure">
+        <svg viewBox="0 0 300 340" width="280" height="318">
+          <defs>
+            <radialGradient id="glow" cx="50%" cy="32%" r="65%">
+              <stop offset="0%" stop-color="#d7f4f0"/>
+              <stop offset="100%" stop-color="#d7f4f0" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ffe9de"/>
+              <stop offset="55%" stop-color="#fcd9c6"/>
+              <stop offset="100%" stop-color="#f0c3ab"/>
+            </linearGradient>
+            <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#12403d"/>
+              <stop offset="100%" stop-color="#0b6e6a"/>
+            </linearGradient>
+            <linearGradient id="topGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ffb7a8"/>
+              <stop offset="100%" stop-color="#ef8272"/>
+            </linearGradient>
+            <linearGradient id="fanGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ffcabb"/>
+              <stop offset="100%" stop-color="#ef8272"/>
+            </linearGradient>
+            <radialGradient id="cheekGrad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ef8272" stop-opacity="0.45"/>
+              <stop offset="100%" stop-color="#ef8272" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+
+          <circle cx="150" cy="150" r="148" fill="url(#glow)"/>
+          <ellipse cx="150" cy="316" rx="78" ry="10" fill="#cdeee9"/>
+
+          <g stroke="#bfe6e2" stroke-width="3" stroke-linecap="round" opacity="0.8">
+            <path d="M225 108 C 236 104, 246 106, 254 112" fill="none"/>
+            <path d="M222 128 C 234 126, 245 130, 252 138" fill="none"/>
+            <path d="M216 148 C 229 148, 239 154, 244 162" fill="none"/>
+          </g>
+
+          <path d="M92 118 C82 78 104 40 150 38 C198 40 220 80 208 122 C216 150 214 182 200 206 C204 170 198 140 182 122 C186 148 182 176 168 196 C176 160 168 128 150 116 C132 128 124 160 132 196 C118 176 112 148 116 122 C100 140 94 170 98 206 C84 182 82 150 92 118Z" fill="url(#hairGrad)"/>
+
+          <path d="M118 190 L118 214 C 90 224, 70 252, 66 288 L234 288 C230 252, 210 224, 182 214 L182 190 Z" fill="url(#topGrad)"/>
+          <path d="M96 264 C110 254 126 250 140 250" stroke="#d96654" stroke-width="2.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+          <path d="M160 252 C176 254 190 260 202 270" stroke="#d96654" stroke-width="2.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+
+          <path d="M120 188 C 134 200, 166 200, 180 188 L180 210 C 166 220, 134 220, 120 210 Z" fill="#e9b79c"/>
+
+          <path d="M150 74 C176 74 194 96 192 126 C190 154 176 176 150 176 C124 176 110 154 108 126 C106 96 124 74 150 74Z" fill="url(#skinGrad)"/>
+
+          <path d="M108 118 C100 116 96 126 100 134 C103 140 109 140 110 134" fill="url(#skinGrad)" stroke="#e6b79f" stroke-width="1.5"/>
+          <circle cx="104" cy="140" r="2.6" fill="#ffd77a"/>
+
+          <ellipse cx="128" cy="140" rx="14" ry="9" fill="url(#cheekGrad)"/>
+          <ellipse cx="172" cy="140" rx="14" ry="9" fill="url(#cheekGrad)"/>
+
+          <path d="M120 112 C127 106 138 105 145 109" stroke="#2c2320" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M180 112 C173 106 162 105 155 109" stroke="#2c2320" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+          <path d="M119 124 C125 119 137 119 143 124 C137 129 125 129 119 124Z" fill="#fff"/>
+          <circle cx="131" cy="124" r="4.6" fill="#3a2a22"/>
+          <circle cx="132.5" cy="122.3" r="1.3" fill="#fff"/>
+          <path d="M119 124 C125 119 137 119 143 124" stroke="#2c2320" stroke-width="1.6" fill="none"/>
+
+          <path d="M181 124 C175 119 163 119 157 124 C163 129 175 129 181 124Z" fill="#fff"/>
+          <circle cx="169" cy="124" r="4.6" fill="#3a2a22"/>
+          <circle cx="170.5" cy="122.3" r="1.3" fill="#fff"/>
+          <path d="M181 124 C175 119 163 119 157 124" stroke="#2c2320" stroke-width="1.6" fill="none"/>
+
+          <path d="M148 128 C146 136 144 142 141 147 C144 150 148 150 151 148" stroke="#e0ab8f" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+          <path d="M136 158 C142 162 158 162 164 158 C158 166 142 166 136 158Z" fill="#d9695a"/>
+          <path d="M136 157 C142 154 158 154 164 157" stroke="#c85847" stroke-width="1.4" fill="none"/>
+
+          <path d="M108 118 C104 96 116 76 138 70 C128 82 122 96 122 112 C116 108 111 112 108 118Z" fill="url(#hairGrad)"/>
+          <path d="M192 118 C196 96 184 76 162 70 C172 82 178 96 178 112 C184 108 189 112 192 118Z" fill="url(#hairGrad)"/>
+          <path d="M138 70 C142 66 158 66 162 70 C168 76 172 84 172 92 C160 82 140 82 128 92 C128 84 132 76 138 70Z" fill="url(#hairGrad)"/>
+
+          <g transform="translate(206,158) rotate(-8)">
+            <ellipse cx="0" cy="0" rx="15" ry="11" fill="url(#skinGrad)"/>
+            <g transform="translate(8,-6) rotate(-32)">
+              <path d="M0 0 L 8 -66 A70 70 0 0 1 34 -58 L 0 0Z" fill="url(#fanGrad1)"/>
+              <path d="M0 0 L 34 -58 A70 70 0 0 1 55 -40 L 0 0Z" fill="#ffdfd4"/>
+              <path d="M0 0 L 55 -40 A70 70 0 0 1 68 -14 L 0 0Z" fill="url(#fanGrad1)"/>
+              <path d="M0 0 L 68 -14 A70 70 0 0 1 70 6 L 0 0Z" fill="#ffdfd4"/>
+              <g stroke="#c85f4f" stroke-width="1" opacity="0.5">
+                <path d="M0 0 L8 -66" fill="none"/>
+                <path d="M0 0 L34 -58" fill="none"/>
+                <path d="M0 0 L55 -40" fill="none"/>
+                <path d="M0 0 L68 -14" fill="none"/>
+              </g>
+              <circle cx="0" cy="0" r="4.5" fill="#8a4436"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <svg class="wave" viewBox="0 0 1040 44" preserveAspectRatio="none"><path d="M0 22 C 130 4, 260 40, 390 22 C 520 4, 650 40, 780 22 C 910 4, 980 22, 1040 18 L1040 44 L0 44 Z" fill="#eafbfa"/></svg>
+
+  <!-- WHY WOMEN FEEL HEAT MORE -->
+  <div class="sec-head">
+    <div class="tag">為什麼女性特別怕熱？</div>
+    <h2 class="serif">高溫之下，女性更容易「喊累」</h2>
+  </div>
+  <div class="chip-row">
+    <div class="chip">
+      <div class="chip-icon" style="background:#dff1fb;">
+        <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2C12 2 5 11 5 15.5A7 7 0 0 0 19 15.5C19 11 12 2 12 2Z" fill="#3d8fd1"/></svg>
+      </div>
+      <h3>排汗效率較低</h3>
+      <p>身體更費力才能涼快</p>
+    </div>
+    <div class="chip">
+      <div class="chip-icon" style="background:#fde3ea;">
+        <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8" stroke="#e2637a" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="4" fill="#e2637a"/></svg>
+      </div>
+      <h3>體感較為敏感</h3>
+      <p>生理期、更年期更怕熱</p>
+    </div>
+    <div class="chip">
+      <div class="chip-icon" style="background:#eee3fb;">
+        <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2C7 2 3 6 3 11c0 5 4 11 9 11s9-6 9-11c0-5-4-9-9-9Z" fill="#a07de0"/></svg>
+      </div>
+      <h3>體脂比例偏高</h3>
+      <p>熱氣較不易散發出去</p>
+    </div>
+  </div>
+
+  <svg class="wave" viewBox="0 0 1040 44" preserveAspectRatio="none"><path d="M0 20 C 130 38, 260 2, 390 20 C 520 38, 650 2, 780 20 C 910 38, 980 20, 1040 24 L1040 44 L0 44 Z" fill="#ffffff"/></svg>
+
+  <!-- BENEFITS -->
+  <div class="benefit-band">
+    <div class="sec-head-inner">
+      <div class="tag">固定調理，身體會有感的改變</div>
+      <h2 class="serif">陪身體，練出更從容的消暑力</h2>
+    </div>
+    <div class="benefit-grid">
+      <div class="benefit-chip">
+        <div class="b-icon"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6C19 16.5 12 21 12 21z" fill="#fff"/></svg></div>
+        <h4>卸下沉重感</h4>
+        <p>舒展一整天的疲憊</p>
+      </div>
+      <div class="benefit-chip">
+        <div class="b-icon"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-4 12.7V17a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2.3A7 7 0 0 0 12 2Z" fill="#fff"/></svg></div>
+        <h4>找回平靜感</h4>
+        <p>安撫悶熱的浮躁</p>
+      </div>
+      <div class="benefit-chip">
+        <div class="b-icon"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M12 2C8 6 5 11 5 15a7 7 0 0 0 14 0c0-4-3-9-7-13Z" fill="#fff"/></svg></div>
+        <h4>揉開悶脹感</h4>
+        <p>順著經絡，舒暢自在</p>
+      </div>
+      <div class="benefit-chip">
+        <div class="b-icon"><svg width="26" height="26" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="#fff"/></svg></div>
+        <h4>好眠更香甜</h4>
+        <p>隔天神清氣爽</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLOSING -->
+  <div class="closing">
+    <h3 class="serif">消暑，從善待自己的身體開始</h3>
+    <p>固定調理，陪妳從容一整夏。</p>
+  </div>
+
+  <div class="footer-bar">固定調理 <span class="dot">•</span> 從容消暑 <span class="dot">•</span> 由內而外的改變 ♥</div>
+</div>
+</body>
+</html>
